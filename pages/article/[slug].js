@@ -47,7 +47,7 @@ const slug = ({ article }) => {
             "Subani Moktan,Mrs. Haze,Mrs. Haze Writes," +
             article.title +
             "," +
-            category.title
+            article.category.title
           }
         />
         <meta
@@ -67,7 +67,7 @@ const slug = ({ article }) => {
         <meta property="fb:pages" content="333706163397393" />
 
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={global.location.href} />
+        <meta property="og:url" content={global.location?.href} />
         <meta
           property="og:title"
           content={article.title + " - Mrs. Haze"}
@@ -80,7 +80,7 @@ const slug = ({ article }) => {
         <meta property="og:site_name" content="Mrs. Haze" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={global.location.href} />
+        <meta name="twitter:url" content={global.location?.href} />
         <meta
           name="twitter:title"
           content={article.title + " - Mrs. Haze"}
