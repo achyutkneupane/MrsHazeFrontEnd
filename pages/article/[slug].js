@@ -3,6 +3,7 @@ import Head from "next/head";
 import ReactHtmlParser from "html-react-parser";
 import Footer from "../../components/Footer";
 import OtherArticles from "../../components/OtherArticles";
+import Header from "../../components/Header";
 
 export const getStaticPaths = async (context) => {
   console.log(context);
@@ -87,6 +88,7 @@ const slug = ({ article,others,content }) => {
         <meta name="twitter:image" content={article.cover} />
         <meta name="twitter:site" content="@moktansubani" />
       </Head>
+      <Header />
       <div>
         <div className="flex flex-col gap-4 py-12">
           <div className="flex flex-row justify-center px-8">

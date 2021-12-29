@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-const Header = () => (
+const Footer = () => (
   <div className="items-center w-full mx-auto">
     <footer className="text-gray-700 transition duration-500 ease-in-out transform bg-gray-100 border rounded-lg ">
-      <div className="container flex flex-col flex-wrap p-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
-        <div className="flex flex-col-reverse justify-between w-full mt-8 text-left md:flex-row md:mt-0">
-          <div className="flex flex-col justify-center w-full pr-4 md:w-1/5 md:order-1">
-            <h2 className="mx-auto mb-6 text-6xl leading-snug tracking-tighter text-black md:mx-0 title-font logoText">
+      <div className="container flex flex-col flex-wrap p-8 mx-auto lg:items-center lg:items-start lg:flex-row lg:flex-no-wrap ">
+        <div className="flex flex-col-reverse justify-between w-full mt-8 text-left lg:flex-row lg:mt-0">
+          <div className="flex flex-col justify-center w-full pr-4 lg:w-1/5 lg:order-1">
+            <h2 className="mx-auto mb-6 text-6xl leading-snug tracking-tighter text-black lg:mx-0 title-font logoText">
               Mrs. Haze
             </h2>
-            <span className="inline-flex justify-center md:justify-start sm:mb-12">
+            <span className="inline-flex justify-center lg:justify-start lg:mb-12">
               <a
                 href="https://www.facebook.com/moktan.subani"
                 target="_blank"
@@ -86,14 +86,14 @@ const Header = () => (
                 </svg>
               </a>
             </span>
-            <h2 className="mt-4 mb-4 text-xs font-semibold tracking-widest text-center text-black uppercase md:mt-1 title-font md:text-left">
+            <h2 className="mt-4 mb-4 text-xs font-semibold tracking-widest text-center text-black uppercase lg:mt-1 title-font lg:text-left">
               © Mrs. Haze
               <br />
               All rights reserved.
             </h2>
           </div>
-          <div className="flex flex-col justify-center w-full gap-4 px-8 text-center align-center md:w-3/5 md:order-2">
-            <h3 className="hidden mb-8 text-lg tracking-widest text-center text-gray-700 title-font md:block">
+          <div className="flex flex-col justify-center w-full gap-4 px-8 text-center align-center lg:w-3/5 lg:order-2">
+            <h3 className="hidden mb-8 text-lg tracking-widest text-center text-gray-700 title-font lg:block">
               <b>Mrs. Haze</b> in the house, ya&apos;ll! (aka{" "}
               <b>Subani Moktan</b>). Join me as we unravel the mystery of why my
               brain works at the speed of light: constantly thinking to the
@@ -107,27 +107,27 @@ const Header = () => (
               ) : (
                 ""
               )} */}
-              <div className="flex flex-col items-center justify-center w-full text-center md:flex-row align-center">
+              <div className="flex flex-col items-center justify-center w-full text-center lg:flex-row align-center">
                 <input
                   type="text"
                   placeholder="Enter your e-mail to subscribe to Newsletter"
-                  className="w-full px-4 py-2 mx-auto mb-4 text-base text-black transition ease-in-out transform bg-white rounded-lg md:mr-4 md:w-4/5 duration-650 focus:outline-none focus:border-turq sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                  className="w-full px-4 py-2 mx-auto mb-4 text-base text-black transition ease-in-out transform bg-white rounded-lg lg:mr-4 lg:w-4/5 duration-650 focus:outline-none focus:border-turq lg:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                   name="email"
                   value=""
                   readOnly
                   required
                 />
-                <button className="flex items-center justify-center px-6 py-2 font-semibold text-center text-white transition duration-500 ease-in-out transform bg-black rounded-lg md:w-1/5 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                <button className="flex items-center justify-center px-6 py-2 font-semibold text-center text-white transition duration-500 ease-in-out transform bg-black rounded-lg lg:w-1/5 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
                   Subscribe
                 </button>
               </div>
             </form>
           </div>
-          <div className="w-full px-8 md:w-1/5 md:order-3">
-            <h3 className="hidden mb-8 text-xs tracking-widest text-justify text-black uppercase title-font md:block">
+          <div className="w-full px-8 lg:w-1/5 lg:order-3">
+            <h3 className="hidden mb-8 text-xs tracking-widest text-justify text-black uppercase title-font lg:block">
               Link
             </h3>
-            <nav className="flex flex-row mb-10 list-none justify-evenly md:space-y-4 md:flex-col">
+            <nav className="flex flex-row mb-10 list-none justify-evenly lg:space-y-4 lg:flex-col">
               <li>
                 <Link href="/">
                   <a className="mr-1 text-sm transition duration-500 ease-in-out transform rounded-sm text-turq focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
@@ -159,4 +159,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Footer;
