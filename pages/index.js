@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import AllArticles from "../components/AllArticles";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://mrshaze.me/api/articles");
   const articles = await res.json();
   return {
@@ -68,7 +68,7 @@ export default function Home({ articles }) {
           <div
             className="w-full h-full bg-center bg-no-repeat bg-cover lg:bg-left lg:bg-contain"
             style={{
-              backgroundImage: `url(/images/Subani-Moktan-mrshaze.png)`,
+              backgroundImage: `url(/images/Subani-Moktan-mrshaze.webp)`,
             }}
           >
             <div className="flex justify-end w-full h-full bg-opacity-60 bg-turq lg:bg-opacity-0">
