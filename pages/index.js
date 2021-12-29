@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import AllArticles from "../components/AllArticles";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://mrshaze.me/api/articles");
   const articles = await res.json();
   return {
@@ -43,7 +43,7 @@ export default function Home({ articles }) {
         <meta property="og:url" content={global.location?.href} />
         <meta
           property="og:title"
-          content="Ankita Pun unveils Char Din Char Juni from debut album Maili"
+          content="Mrs. Haze"
         />
         <meta
           property="og:description"

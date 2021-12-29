@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 
+console.log("%cThis site is developed by Achyut Neupane(https://achyut.com.np)", "color:black; font-size:15px");
+
 function MyApp({ Component, pageProps }) {
-  console.log("%cThis site is developed by Achyut Neupane(https://achyut.com.np)", "color:black; font-size:15px");
   return <Component {...pageProps} />
 }
 

@@ -2,7 +2,7 @@ import moment from "moment";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export const getStaticPaths = async (context) => {
+export const getServerSidePaths = async (context) => {
   console.log(context);
   const res = await fetch("https://mrshaze.me/api/articles");
   const articles = await res.json();
@@ -20,7 +20,7 @@ export const getStaticPaths = async (context) => {
   };
 };
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const slug = context.params.slug;
   const res = await fetch("https://mrshaze.me/api/article/" + slug);
   const article = await res.json();
