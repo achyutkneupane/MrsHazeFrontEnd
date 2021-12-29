@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header = () => (
   <div className="items-center w-full mx-auto">
     <footer className="text-gray-700 transition duration-500 ease-in-out transform bg-gray-100 border rounded-lg ">
@@ -92,14 +94,12 @@ const Header = () => (
           </div>
           <div className="flex flex-col justify-center w-full gap-4 px-8 text-center align-center md:w-3/5 md:order-2">
             <h3 className="hidden mb-8 text-lg tracking-widest text-center text-gray-700 title-font md:block">
-              <b>Mrs. Haze</b> in the house, ya&apos;ll! (aka <b>Subani Moktan</b>).
-              Join me as we unravel the mystery of why my brain works at the
-              speed of light: constantly thinking to the point of
-              overthinking—and overthinking overthinking.
+              <b>Mrs. Haze</b> in the house, ya&apos;ll! (aka{" "}
+              <b>Subani Moktan</b>). Join me as we unravel the mystery of why my
+              brain works at the speed of light: constantly thinking to the
+              point of overthinking—and overthinking overthinking.
             </h3>
-            <form
-              className="flex flex-col items-center justify-center w-full gap-4 text-center align-center"
-            >
+            <form className="flex flex-col items-center justify-center w-full gap-4 text-center align-center">
               {/* {this.state.subscribed ? (
                 <div className="text-xl font-bold text-green-600 uppercase">
                   Subscribed!
@@ -113,7 +113,7 @@ const Header = () => (
                   placeholder="Enter your e-mail to subscribe to Newsletter"
                   className="w-full px-4 py-2 mx-auto mb-4 text-base text-black transition ease-in-out transform bg-white rounded-lg md:mr-4 md:w-4/5 duration-650 focus:outline-none focus:border-turq sm:mb-0 focus:bg-white focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                   name="email"
-                  value='Test'
+                  value=""
                   readOnly
                   required
                 />
@@ -129,9 +129,11 @@ const Header = () => (
             </h3>
             <nav className="flex flex-row mb-10 list-none justify-evenly md:space-y-4 md:flex-col">
               <li>
-                <a className="mr-1 text-sm transition duration-500 ease-in-out transform rounded-sm text-turq focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                  Home
-                </a>
+                <Link href="/">
+                  <a className="mr-1 text-sm transition duration-500 ease-in-out transform rounded-sm text-turq focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                    Home
+                  </a>
+                </Link>
               </li>
               <li>
                 <a className="mr-1 text-sm transition duration-500 ease-in-out transform rounded-sm text-turq focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
