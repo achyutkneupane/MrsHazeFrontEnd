@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import AllArticles from "../components/AllArticles";
 
 export async function getStaticProps() {
-  const res = await fetch("https://mrshaze.me/api/articles");
+  const res = await fetch(process.env.API_LINK+"articles");
   const articles = await res.json();
   return {
     props: {

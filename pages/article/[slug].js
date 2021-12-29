@@ -7,7 +7,7 @@ import Header from "../../components/Header";
 
 export const getStaticPaths = async (context) => {
   console.log(context);
-  const res = await fetch("https://mrshaze.me/api/articles");
+  const res = await fetch(process.env.API_LINK+"articles");
   const articles = await res.json();
   const paths = articles?.map((article) => {
     return {
@@ -26,10 +26,10 @@ export const getStaticPaths = async (context) => {
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
 
-  const articleRes = await fetch("https://mrshaze.me/api/article/" + slug);
+  const articleRes = await fetch(process.env.API_LINK+"article/" + slug);
   const article = await articleRes.json();
 
-  const otherRes = await fetch("https://mrshaze.me/api/articles/without/"+slug);
+  const otherRes = await fetch(process.env.API_LINK+"articles/without/"+slug);
   const others = await otherRes.json();
 
   const content = article.content.split("\n");
@@ -87,6 +87,7 @@ const slug = ({ article,others,content }) => {
         <meta name="twitter:description" content={article.description} />
         <meta name="twitter:image" content={article.cover} />
         <meta name="twitter:site" content="@moktansubani" />
+        <link rel="icon" href="/images/favicon.png" />
       </Head>
       <Header />
       <div>
